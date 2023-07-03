@@ -13,7 +13,7 @@ if selected_assets is not None:
     if num_assets > 0:
         with unreal.ScopedSlowTask(num_assets, "Reporting unused assets...") as slow_task:
             slow_task.make_dialog(True)
-            for asset in allAssets:
+            for asset in selected_assets:
                 if slow_task.should_cancel():
                     break
                 slow_task.enter_progress_frame(1)
